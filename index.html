@@ -17,6 +17,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        
+        // Firebase configuration - Necesitarás reemplazar esto con tu configuración
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhCasLUOO0hvQ0-42H2QuQfG3JIQAi2w4",
+            authDomain: "landingpage-7f0ce.firebaseapp.com",
+            projectId: "landingpage-7f0ce",
+            storageBucket: "landingpage-7f0ce.firebasestorage.app",
+            messagingSenderId: "1014662309246",
+            appId: "1:1014662309246:web:6d649d076f82bba4b67f2f",
+            measurementId: "G-ZS6E80P9VG"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        // Make Firebase available globally
+        window.firebase = { db, collection, addDoc, getDocs, deleteDoc, doc };
+    </script>
 </head>
 <body class="font-inter bg-gray-50 text-gray-900">
     <!-- Navigation -->

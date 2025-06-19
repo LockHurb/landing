@@ -17,29 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Firebase SDK -->
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
-        
-        // Firebase configuration - Necesitarás reemplazar esto con tu configuración
-        const firebaseConfig = {
-            apiKey: "AIzaSyDhCasLUOO0hvQ0-42H2QuQfG3JIQAi2w4",
-            authDomain: "landingpage-7f0ce.firebaseapp.com",
-            projectId: "landingpage-7f0ce",
-            storageBucket: "landingpage-7f0ce.firebasestorage.app",
-            messagingSenderId: "1014662309246",
-            appId: "1:1014662309246:web:6d649d076f82bba4b67f2f",
-            measurementId: "G-ZS6E80P9VG"
-        };
-        
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        
-        // Make Firebase available globally
-        window.firebase = { db, collection, addDoc, getDocs, deleteDoc, doc };
-    </script>
+    
 </head>
 <body class="font-inter bg-gray-50 text-gray-900">
     <!-- Navigation -->
@@ -47,8 +25,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-2 cursor-pointer" onclick="scrollToSection('hero')">
-                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">CB</span>
+                    <div class="w-8 h-8 flex items-center justify-center">
+                    <img src="./public/logo bootcamps recortado.png" >
                     </div>
                     <span class="font-bold text-xl">Coding Bootcamps ESPOL</span>
                 </div>
@@ -646,6 +624,9 @@
                             Enviar Solicitud
                         </button>
                     </form>
+                    <script type="module" src="js/firebase_init.js"></script>
+                    <script type="module" src="js/firebase_funcs.js"></script>
+                    <script type="module" src="js/manejar_form.js"></script>
                 </div>
             </div>
         </div>

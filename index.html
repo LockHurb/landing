@@ -632,42 +632,16 @@
     </section>
 
     <!-- Data Display Section -->
-    <section id="datos" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Solicitudes
-                    <span class="text-blue-600">Recibidas</span>
-                </h2>
-                <p class="text-xl text-gray-600 mb-6">
-                    <span id="submissions-count">0</span> solicitud<span id="submissions-plural">es</span> de información recibida<span id="submissions-plural-2">s</span>.
-                </p>
-                <button id="clear-data" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors flex items-center mx-auto">
-                    <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
-                    </svg>
-                    Limpiar Datos
-                </button>
-            </div>
+    
+<section id="datos" class="pt-16 pb-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold mb-6">Solicitudes recibidas</h2>
+    <div id="solicitudes-lista" class="space-y-4">
+      <p>Cargando solicitudes...</p>
+    </div>
+  </div>
+</section>
 
-            <div id="submissions-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Las solicitudes aparecerán aquí dinámicamente -->
-            </div>
-
-            <div id="empty-state" class="text-center">
-                <div class="max-w-md mx-auto">
-                    <div class="bg-white border border-gray-200 rounded-lg p-8">
-                        <svg class="h-16 w-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                        <p class="text-gray-600">
-                            Aún no hay solicitudes enviadas. ¡Completa el formulario de contacto para ver los datos aquí!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white">
@@ -766,6 +740,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+<script type="module" src="./js/contactos.js"></script>
+
+
 </body>
 </html>

@@ -1,6 +1,11 @@
 // contact-functions.js
 import { database } from './firebase_init.js';
+import { get } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 import { ref, push, set } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { app } from './firebase_init.js';
+
+const db = getFirestore(app);
 
 /**
  * Guarda los datos de contacto en Firebase
@@ -189,4 +194,14 @@ export function validateContactData(data) {
         isValid: errors.length === 0,
         errors
     };
+}
+
+export async function getAllSolicitudes() {
+  const solicitudesCol = collection(db, 'solicitudes');
+  const solicitudesSnapshot = await getDocs(solicitudesCol);
+  const solicitudesList = solicitudesSnapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data()
+  }));
+  return solicitudesList;
 }
